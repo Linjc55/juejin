@@ -1,0 +1,152 @@
+/*
+ * @Description: 推荐博客
+ * @Author: 林俊丞
+ * @Date: 2021-04-16 22:45:56
+ * @LastEditTime: 2021-04-21 19:55:11
+ * @LastEditors: 林俊丞
+ */
+.news {
+    display: flow-root;
+    width: 700px;
+    height: auto;
+    margin-right: 10px;
+    background-color: white;
+}
+
+.newsHeader {
+    display: flex;
+    align-items: center;
+    padding: 15px 12px;
+    border-bottom: 1px solid hsla(0, 0%, 59.2%, .2);
+}
+
+.news .newsHeader li {
+    font-size: 14px;
+    padding: 0 14px;
+    border-right: 1px solid hsla(0, 0%, 59.2%, .2);
+}
+
+.news .newsHeader li a {
+    color: #71777c;
+    cursor: pointer;
+}
+
+.news .newsHeader .selected {
+    color: #007fff;
+}
+
+/* news主体 */
+.contentBox {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
+}
+
+.newsLi {
+    cursor: pointer;
+}
+
+.newsLi li:hover {
+    background-color: rgb(252, 252, 252);
+}
+
+.contentBox .newsBox {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.newsLi .colorBlue:hover {
+    color: #007fff;
+}
+
+.newsTime .authorName::after {
+    content: '·';
+    margin: 0px 5px;
+}
+
+.newsBox .newsTitle {
+    margin: 6px 0 12px;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #2e3135;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.newsBox .newsTitle span:hover {
+    text-decoration: underline;
+}
+
+.newsBox .newsInf {
+    font-size: 13px;
+    color: #b2bac2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.newsBox .newsTime ul {
+    display: flex;
+    font-size: 12px;
+    color: #b2bac2;
+}
+
+.contentBox img {
+    flex: 0 0 auto;
+    margin-left: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+/* 点赞 */
+.newsBtn ul {
+    display: inline-flex;
+    align-items: center;
+}
+
+.newsBtn ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    padding: 0 8px;
+    border: 1px solid #edeeef;
+    height: 24px;
+    color: #b2b2b2;
+    border-radius: 1px;
+    cursor: pointer;
+}
+.newsBtn .selectedBtn {
+    color: #007fff;
+}
+.shareIcon {
+    display: none !important;
+}
+
+.newsBtn ul li:hover {
+    background-color: rgb(247, 248, 250);
+}
+
+.newsBtn i {
+    font-family: 'icomoon';
+}
+
+.newsLi li:hover .shareIcon {
+    display: flex !important;
+}
+
+.newsBtn li span {
+    display: block;
+    margin-left: 3px;
+}
+/* 点赞样式 */
+.newsUl .true {
+    color: #007fff;
+}

@@ -1,0 +1,341 @@
+/*
+ * @Description: 侧边栏
+ * @Author: 林俊丞
+ * @Date: 2021-04-16 22:46:01
+ * @LastEditTime: 2021-04-18 14:03:40
+ * @LastEditors: 林俊丞
+ */
+aside {
+    position: absolute;
+    width: 240px;
+    height: auto;
+    /* height: 3000px; */
+    top: 0;
+    right: 0;
+}
+
+/**
+ * @description: 手机号登录盒子
+ */
+.loginBox {
+    font-size: 14px;
+    padding: 14px;
+    background-color: white;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+
+}
+
+.loginBox .title {
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.loginBox .solgan {
+    margin-bottom: 3px;
+}
+
+.telIpt {
+    margin-bottom: 13px;
+}
+
+.inTel {
+    padding: 0 10px;
+    border: 1px solid #d9d9d9;
+    line-height: 35px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(251, 251, 251);
+}
+
+.inTel .local i {
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.inTel .local a {
+    font-family: 'icomoon';
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.inTel .tel {
+    outline: none;
+    border: none;
+    width: 70%;
+    background-color: rgb(251, 251, 251);
+}
+
+.successCode {
+    position: relative;
+    background-color: #f4f5f5;
+    line-height: 35px;
+    font-size: 14px;
+}
+
+.successCode .codeIpt {
+    background-color: #f4f5f5;
+    outline: none;
+    border: none;
+    text-indent: 1em;
+    width: 100%;
+}
+
+.successCode span {
+    position: absolute;
+    right: 20px;
+    color: #007fff;
+    cursor: pointer;
+}
+
+.successBtn {
+    width: 100%;
+    font-size: 14px;
+    padding: 9px 0;
+    color: white;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    background-color: #007fff;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.agreement {
+    font-size: 14px;
+    line-height: 22px;
+    color: #767676;
+}
+
+.agreement i {
+    color: #007fff;
+    cursor: pointer;
+}
+
+/**
+ * @description: 图片
+ */
+aside .sidebarFix {
+    position: fixed;
+    width: 240px;
+    top: 0px;
+}
+aside .sideBox {
+    transition: all .3s;
+}
+aside .sideBanner {
+    position: relative;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+    height: 200px;
+}
+
+.adv {
+    cursor: pointer;
+}
+
+.sideBanner .posBan {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+    border: 1px solid #fff;
+    border-radius: 6px;
+    font-weight: 300;
+    padding: 0px 10px;
+    transform: scale(.7);
+}
+
+.posBan .noneIcon {
+    display: none;
+}
+
+.posBan:hover {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.rightCode {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.downCode {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+.downCode .code {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.downCode .downApp {
+    font-size: 12px;
+}
+
+.downApp .downFirst {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 8px;
+    color: #1d2129;
+}
+
+.downApp .downSmall {
+    color: #909090;
+}
+
+/**
+ * @description: 作者榜
+ */
+.charts {
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+    margin-bottom: 8px;
+}
+
+.charts i {
+    font-family: 'icomoon';
+}
+
+.chartsTitle {
+    padding: 12px 15px;
+    font-size: 14px;
+    border-bottom: 1px solid hsla(0, 0%, 59.2%, .1);
+}
+
+.charts .allAuthor {
+    font-size: 14px;
+    width: 100%;
+    color: #007fff;
+    text-align: center;
+    border-top: 1px solid hsla(0, 0%, 59.2%, .1);
+    padding: 12px 0px;
+    cursor: pointer;
+}
+
+.charts .one {
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.charts .one .head {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.charts .one .word {
+    padding: 0px 5px;
+}
+
+.charts .one .word a {
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.one .word .rank {
+    display: inline-block;
+    width: 23px;
+    height: 15px;
+    margin-left: 3px;
+    padding: 3px;
+}
+
+.one .word .inf {
+    font-size: 12px;
+    color: #909090;
+    margin: 3px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 下载软件 */
+.download {
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+    margin-bottom: 8px;
+}
+
+.downItem {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    height: 100%;
+}
+
+.downItem img {
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+}
+
+.downItem a {
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.downItem .downTitle {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+/* 声明部分 */
+.aboutUs {
+    margin-bottom: 15px;
+}
+
+.aboutUs .aboutList {
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    color: #9aa3ab;
+}
+
+.aboutUs .aboutList::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.aboutList li:last-child::after {
+    display: none;
+}
+
+.aboutUs .aboutList li {
+    float: left;
+}
+
+.aboutList li::after {
+    content: "·";
+    margin: 0 6px;
+    color: #c6cfda;
+}
+
+.aboutUs .touchList {
+    color: #909090;
+    cursor: pointer;
+}
+
+.aboutUs .touchList:hover {
+    color: #007fff;
+}
+
+.aboutUs .aboutLogo li {
+    width: 24px;
+    height: 24px;
+    margin: 12px 12px 12px 0px;
+}

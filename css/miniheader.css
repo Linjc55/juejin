@@ -1,0 +1,62 @@
+/*
+ * @Description: 头部下面的小导航
+ * @Author: 林俊丞
+ * @Date: 2021-04-16 22:17:45
+ * @LastEditTime: 2021-04-22 00:53:43
+ * @LastEditors: 林俊丞
+ */
+.miniFix {
+    position: fixed;
+    width: 100%;
+    top: 60px;
+    z-index: 1;
+    transition: all .5s;
+}
+
+.miniHeader {
+    border-bottom: 1px solid #f1f1f1;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+}
+
+.miniBox {
+    width: 960px;
+    margin: auto;
+    height: 46px;
+}
+
+.miniBoxLi {
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.miniBoxLi li:first-child {
+    padding: 0px 12px 0px 0px;
+}
+
+.miniBoxLi li:last-child {
+    display: none;
+    position: absolute;
+    right: 0;
+}
+
+.miniBoxLi li {
+    padding: 0 12px;
+    color: #71777c;
+}
+
+.miniBoxLi li:hover {
+    color: #007fff;
+}
+
+.miniBoxLi a {
+    font-size: 14px;
+    color: inherit;
+}
+
+.miniBox .selected {
+    color: #007fff;
+}

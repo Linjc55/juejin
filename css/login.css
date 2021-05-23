@@ -1,0 +1,140 @@
+/*
+ * @Description: 登录页面
+ * @Author: 林俊丞
+ * @Date: 2021-04-17 16:14:08
+ * @LastEditTime: 2021-04-18 11:22:25
+ * @LastEditors: 林俊丞
+ */
+.loginFace {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 222;
+}
+
+
+.loginFace .icon {
+    font-family: 'icomoon';
+}
+
+.bigLogin {
+    position: relative;
+    background-color: white;
+    padding: 12px 15px;
+}
+
+.loginFace .innerLogin {
+    width: 270px;
+}
+
+.loginFace .innerLogin h1 {
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.loginFace .close {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    opacity: .4;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 22;
+}
+
+.loginFace .successCode {
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+}
+
+.loginFace .successCode .codeIpt {
+    background-color: white;
+}
+
+.loginFace .successBtn {
+    margin-bottom: 14px;
+}
+
+.loginFace .otherLogin {
+    display: inline-block;
+    font-size: 12px;
+    color: #007fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.loginFace .agreement {
+    font-size: 12px;
+}
+.tomImg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 120px;
+    transform: translate(-50%,-80%);
+}
+/* 底层css */
+
+.loginFace .otherBox {
+    display: none;
+    position: relative;
+}
+.loginFace .tewIpt {
+    width: 100%;
+    padding: 0 5px;
+    line-height: 35px;
+    border: none;
+    background-color: rgb(251, 251, 251);
+    outline: none;
+}
+
+.loginFace  .right {
+    position: absolute;
+    right: 0;
+    top: 190px;
+    font-size: 12px;
+    color: #007fff;
+    cursor: pointer;
+}
+.otherBox .loginLogo {
+    margin-bottom: 20px;
+}
+.otherBox .loginLogo ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.otherBox .loginLogo li {
+    width: 45px;
+    height: 45px;
+    background-color: rgb(244, 248, 251);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.otherBox .loginLogo li img{
+    width: 23px;
+    height: 23px;
+}
+/* 登录界面的提示信息 */
+.tips {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.tips ul li {
+    font-size: 14px;
+    padding: 12px 15px;
+    background-color: rgb(230, 243, 255);
+    color: #007fff;
+    margin-bottom: 10px;
+}

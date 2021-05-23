@@ -1,0 +1,426 @@
+/*
+ * @Description: 主页样式
+ * @Author: 林俊丞
+ * @Date: 2021-04-20 14:55:50
+ * @LastEditTime: 2021-04-26 19:18:53
+ * @LastEditors: 林俊丞
+ */
+.minePage {
+    display: none;
+    width: 960px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.mineBox {
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.majorLeft {
+    flex: 1 1 auto;
+}
+
+.message {
+    display: flex;
+    padding: 30px;
+    background-color: white;
+
+}
+
+.message .imgBig {
+    flex: 0 0 auto;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.message .infoBox {
+    flex: 1 1 auto;
+    margin-right: 24px;
+}
+
+.message .actionBox {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.message .sickName {
+    margin-bottom: 12px;
+}
+
+.message .userName {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 30px;
+    color: #000;
+}
+
+.message .work {
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.message .intro {
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.actionBox .linkBox {
+    margin-bottom: auto;
+}
+
+.actionBox .linkBox i {
+    font-family: 'icomoon';
+    margin-left: 12px;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.actionBox .linkBox i:first-child {
+    margin-left: 0;
+}
+
+.actionBox .editBtn {
+    width: 118px;
+    color: #3780f7;
+    margin: 12px 0 0;
+    height: 34px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    border: 1px solid #3780f7;
+    background-color: white;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.myAct {
+    position: relative;
+    margin-top: 10px;
+    background-color: white;
+    height: 50px;
+    border-radius: 3px 3px 0 0;
+    border-bottom: 1px solid #ebebeb;
+
+}
+
+.actHeader {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.actHeader li {
+    /* flex: 0 0 auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.actHeader li strong {
+    margin: 0px 5px;
+}
+
+.actHeader li i {
+    font-family: 'icomoon';
+    opacity: .5;
+}
+
+.actHeader li:hover {
+    opacity: .8;
+}
+
+.actHeader .selected {
+    color: #3780f7;
+    box-shadow: 0px 2px 0px #3780f7;
+}
+
+.bodyBox {
+    display: none;
+}
+
+.bodyBox2 {
+    display: none;
+}
+
+.bodyBox3 {
+    display: none;
+}
+
+/* 弹出盒子 */
+.goodBox,
+.moreBox {
+    display: none;
+    position: absolute;
+    padding: 8px 0;
+    width: 90px;
+    background-color: #fff;
+    border: 1px solid #f3f3f4;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 5%);
+    z-index: 1;
+}
+
+.goodBox .actGood,
+.moreBox .actGood {
+    padding: 8px 0;
+    font-size: 16px;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+}
+
+.goodBox {
+    top: 50px;
+    left: 270px;
+}
+
+.moreBox {
+    top: 50px;
+    left: 450px;
+}
+
+/* 内容区小头部 */
+.bodyHeader {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    height: 50px;
+    white-space: nowrap;
+    border-bottom: 2px solid rgba(230, 230, 231, .5);
+    background-color: white;
+}
+
+.bodyHeader .bodyLeft {
+    margin-right: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.bodyHeader .bodyRight {
+    margin-left: auto;
+}
+
+.bodyRight a {
+    opacity: .5;
+
+}
+
+.bodyHeader a {
+    position: relative;
+    margin-right: 24px;
+}
+
+.bodyHeader a:last-child {
+    margin-right: 0;
+}
+
+.bodyHeader .hot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    margin-top: -8px;
+    width: 1px;
+    height: 18px;
+    background-color: #b2bac2;
+    opacity: .5;
+}
+
+.bodyHeader a {
+    padding: 12px 0;
+    color: inherit;
+}
+
+/* 内容区 */
+.bodyContent {
+    width: 100%;
+    background-color: white;
+}
+
+.noneContent {
+    padding: 24px 0;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    color: #666;
+}
+
+.emptyTip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #b2bac2;
+    background-color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.emptyTip .emptyIcon {
+    font-family: 'icomoon';
+    font-size: 66px;
+}
+
+.emptyText {
+    margin-top: 20px;
+}
+
+/* 右侧固定部分 */
+.majorRight {
+    flex: 0 0 auto;
+    margin-left: 12px;
+    width: 240px;
+}
+
+.majorRight .rightBoxM {
+    position: fixed;
+    top: 80px;
+    transition: all .3s;
+    width: 240px;
+}
+
+.rightBoxM .loved {
+    display: flex;
+    background-color: white;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+}
+
+.loved li {
+    display: block;
+    flex: 1 1 auto;
+    padding: 15px 0;
+    text-align: center;
+    color: #31445b;
+    cursor: pointer;
+}
+
+.loved .loverItem {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.moreInf li {
+    display: flex;
+    padding: 15px 5px;
+    font-size: 15px;
+    color: #000;
+    border-top: 1px solid rgba(230, 230, 231, .5);
+    cursor: pointer;
+}
+
+.moreInf .loveAct {
+    flex: 1;
+}
+
+.moreInf .moreTime {
+    cursor: text;
+}
+
+/* 点击三个小圆圈 */
+#threePotShow {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    margin-top: 12px;
+    width: 96px;
+    font-size: 12px;
+    white-space: nowrap;
+    color: #8f969c;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 #e0e4e9;
+    border: 1px solid rgba(217, 222, 224, .99);
+    /* display: initial; */
+
+}
+
+#threePotShow li {
+    justify-content: left;
+    padding: 8px 10px;
+    border: none;
+}
+
+/* 关注 */
+.loveMe {
+    background-color: white;
+}
+.loveMeItem {
+    position: relative;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f3f3f4;
+}
+
+.loveMeItem a {
+    color: #909090;
+    cursor: pointer;
+}
+
+.loveItem {
+    display: flex;
+    align-items: center;
+    padding: 6px 30px;
+    height: 84px;
+}
+
+.loveItem .youHead {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.youInfo {
+    flex: 1 1 auto;
+}
+.youInfo .youName {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2e3135;
+}
+.youInfo .detail {
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #b9c0c8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.lovedBtn {
+    color: #fff;
+    background-color: #92c452;
+    flex: 0 0 auto;
+    margin: 0 0 0 12px;
+    width: 90px;
+    height: 30px;
+    font-size: 12px;
+    border: 1px solid #92c452;
+    border-radius: 2px;
+    transition: all .3s;
+    cursor: pointer;
+    outline: none;
+}
+.selectedA {
+    opacity: 1 !important;
+}
+/* 显示的按钮 */
+ .loveLovefalse {
+    display: none;
+}

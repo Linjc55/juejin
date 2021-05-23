@@ -1,0 +1,956 @@
+<!--
+ * @Description: 掘金不止，二轮加油！
+ * @Author: 林俊丞
+ * @Date: 2021-04-16 13:07:50
+ * @LastEditTime: 2021-04-30 10:33:44
+ * @LastEditors: 林俊丞
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>掘金-代码不止，掘金不停</title>
+    <link rel="shortcut Icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/miniheader.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/news.css" />
+    <link rel="stylesheet" href="css/aside.css" />
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/write.css">
+    <link rel="stylesheet" href="css/minePage.css">
+    <link rel="stylesheet" href="css/editPage.css">
+    <link rel="stylesheet" href="css/detailPage.css">
+    <link rel="stylesheet" href="css/tipsPage.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="js/axios.js"></script> -->
+    <script src="js/tool.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/firstPage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/write.js"></script>
+    <script src="js/minePage.js"></script>
+    <script src="js/editPage.js"></script>
+    <script src="js/detailPage.js"></script>
+</head>
+
+<body>
+    <!-- 主页 -->
+    <div class="homePage container">
+        <!-- 头部开始 -->
+        <div class="mainHeader headerFix">
+            <header class="headerBox">
+                <div class="logo">
+                    <img src="images/header/logo.svg" alt="掘金" title="掘金" />
+                </div>
+                <nav class="mainNav">
+                    <ul class="navObject">
+                        <li class="navLi">
+                            <ul class="navJump">
+                                <li><a href="javascript:;" class="selected">首页</a></li>
+                                <li><a href="javascript:;">沸点</a></li>
+                                <li><a href="javascript:;">小册</a></li>
+                                <li><a href="javascript:;">活动</a></li>
+                                <li><img src="images/header/offer.svg" alt="" /></li>
+                            </ul>
+                        </li>
+                        <li class="search navLi">
+                            <div class="searchBox">
+                                <input type="search" placeholder="探索掘金" class="searchIpt" />
+                                <img src="images/header/search.svg" alt="搜索图标" />
+                            </div>
+                        </li>
+                        <li class="navLi">
+                            <div class="write">
+                                <button class="add-btn" id="write">写文章</button>
+                                <div class="more"></div>
+                            </div>
+                        </li>
+                        <li id="myLove" class="navLi noneLogin"><i class="clock"></i></li>
+                        <li id="myImg" class="navLi noneLogin">
+                            <div class="my">
+                                <img src="images/header/1.png" alt="头像" class="allHead" />
+                            </div>
+                        </li>
+                        <li class="navLi loginBtn">
+                            <button>登录</button>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="myMore">
+                    <div class="firstUl">
+                        <ul>
+                            <li id="writeLi"><i></i><span>写文章</span></li>
+                            <li><i></i><span>草稿</span></li>
+                        </ul>
+                        <ul>
+                            <li id="myHome"><i></i><span>我的主页</span></li>
+                            <li><i></i><span>我赞过的</span></li>
+                            <li><i></i><span>我的小册</span></li>
+                            <li><i></i><span>我的收藏集</span></li>
+                            <li><i></i><span>标签管理</span></li>
+                        </ul>
+                        <ul>
+                            <li><i></i><span>学学</span></li>
+                        </ul>
+                        <ul>
+                            <li><i></i><span>设置</span></li>
+                            <li id="about"><i></i><span>关于</span><i></i></li>
+                        </ul>
+                        <ul>
+                            <li id="logout"><i></i><span>登出</span></li>
+                        </ul>
+                    </div>
+                    <div class="aboutLi">
+                        <ul>
+                            <li><span>下载应用</span></li>
+                            <li><span>关于</span></li>
+                            <li><span>加入我们</span></li>
+                            <li><span>翻译计划</span></li>
+                            <li><span>合作伙伴</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </header>
+        </div>
+        <!-- 头部结束 -->
+        <!-- 小头部导航开始 -->
+        <div class="miniHeader miniFix">
+            <div class="miniBox">
+                <ul class="miniBoxLi">
+                    <li><a href="javascript:;" class="selected">推荐</a></li>
+                    <li><a href="javascript:;">关注</a></li>
+                    <li><a href="javascript:;">后端</a></li>
+                    <li><a href="javascript:;">前端</a></li>
+                    <li><a href="javascript:;">Android</a></li>
+                    <li><a href="javascript:;">ios</a></li>
+                    <li><a href="javascript:;">人工智能</a></li>
+                    <li><a href="javascript:;">开发工具</a></li>
+                    <li><a href="javascript:;">代码人生</a></li>
+                    <li><a href="javascript:;">阅读</a></li>
+                    <li><a href="javascript:;">标签管理</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 小头部结束 -->
+        <!-- 主体开始 -->
+        <main class="mainPage">
+            <!-- 左侧推荐区 -->
+            <div class="news">
+                <nav>
+                    <div class="newsHeader">
+                        <li><a href="javascript:;" class="selected">热门</a></li>
+                        <li><a href="javascript:;">最新</a></li>
+                        <li><a href="javascript:;">热榜</a></li>
+                    </div>
+                    <div class="newsMain">
+                        <ul>
+                            <div class="newsLi" id="mainPageAct">
+                            </div>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- 右侧固定广告位 -->
+            <aside>
+                <div class="telLogin">
+                    <div class="loginBox">
+                        <div class="title">掘金 - juejin.cn</div>
+                        <div class="solgan">一个帮助开发者成长的社区</div>
+                        <div class="telIpt">
+                            <div class="inTel">
+                                <div class="local"><i>+86</i><a></a></div>
+                                <input type="tel" class="tel" placeholder="请输入手机号" />
+                            </div>
+                            <div class="successCode">
+                                <input type="text" class="codeIpt" maxlength="4" placeholder="验证码" />
+                                <span>获取验证码</span>
+                            </div>
+                        </div>
+                        <button class="successBtn">立即登录</button>
+                        <div class="agreement">
+                            注册登录即表示
+                            <br />
+                            同意
+                            <i> 用户协议 </i>
+                            、
+                            <i>隐私政策</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="sideBox">
+                    <div class="sideBanner adv sideFix">
+                        <img src="images/sidebar/1.png" alt="广告" />
+                        <div class="posBan">
+                            <span class="noneIcon">投放</span>
+                            <span>广告</span>
+                        </div>
+                    </div>
+                    <div class="sideBanner sideFix">
+                        <img src="images/sidebar/2.png" alt="" />
+                    </div>
+                </div>
+                <div class="rightCode">
+                    <div><img src="images/sidebar/3.png" alt="" /></div>
+                    <div class="downCode">
+                        <img src="images/sidebar/4.png" alt="" class="code" />
+                        <div class="downApp">
+                            <div class="downFirst">下载掘金客户端</div>
+
+                            <div class="downSmall">解锁更多技术团队热招职位</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="charts">
+                    <div class="chartsTitle">
+                        <span>🎖️作者榜</span>
+                    </div>
+                    <div class="author">
+                        <div class="one">
+                            <img src="images/sidebar/5.png" alt="头像" class="head" />
+                            <div class="word">
+                                <a href="javascript:;"><span>代码与野兽</span>
+                                    <span class="rank"><img src="images/sidebar/lv4.svg" alt="" /></span></a>
+                                <div class="inf">架构师 @ 保密</div>
+                            </div>
+                        </div>
+                        <div class="one">
+                            <img src="images/sidebar/6.png" alt="头像" class="head" />
+                            <div class="word">
+                                <a href="javascript:;"><span>K8sCat</span><span class="rank"><img
+                                            src="images/sidebar/lv2.svg" alt="" /></span></a>
+                                <div class="inf">架构师 @ 保密</div>
+                            </div>
+                        </div>
+                        <div class="one">
+                            <img src="images/sidebar/7.png" alt="头像" class="head" />
+                            <div class="word">
+                                <a href="javascript:;"><span>l阿童木c</span><span class="rank"><img
+                                            src="images/sidebar/lv3.svg" alt="" /></span></a>
+                                <div class="inf">应用开发工程师 @ 腾讯</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="allAuthor">完整榜单<i></i></div>
+                </div>
+                <div class="download">
+                    <ul class="downList">
+                        <li class="downItem">
+                            <a href="javascript:;">
+                                <img src="images/sidebar/8.png" alt="软件头像" class="downIcon" /><span
+                                    class="downTitle">掘金社区漫游指南</span></a>
+                        </li>
+                        <li class="downItem">
+                            <a href="javascript:;"><img src="images/sidebar/9.png" alt="软件头像" class="downIcon" /><span
+                                    class="downTitle">下载掘金浏览器插件</span></a>
+                        </li>
+                        <li class="downItem">
+                            <a href="javascript:;"><img src="images/sidebar/10.png" alt="软件头像" class="downIcon" /><span
+                                    class="downTitle">前往掘金翻译计划</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aboutUs">
+                    <ul class="aboutList">
+                        <li class="touchList">关于</li>
+                        <li class="touchList">营业执照</li>
+                        <li class="touchList">友情链接</li>
+                    </ul>
+                    <ul class="aboutList">
+                        <li class="touchList">用户协议</li>
+                        <li class="touchList">隐私政策</li>
+                        <li class="touchList">使用指南</li>
+                    </ul>
+                    <ul class="aboutList">
+                        <li class="touchList">京ICP备18012699号-3</li>
+                    </ul>
+                    <ul class="aboutList">
+                        <li class="touchList">京公网安备11010802026719号</li>
+                        <li>版权所有：北京北比信息技术有限公司</li>
+                        <li>公司地址：北京市海淀区信息路甲28号13层B座13B-5</li>
+                        <li>公司座机：010-83434395</li>
+                        <li>举报邮箱：<a href="javascript:;" class="touchList">feedback@xitu.io</a></li>
+                    </ul>
+                    <ul class="aboutList">
+                        <li class="touchList">©2021 掘金</li>
+                    </ul>
+                    <ul class="aboutList aboutLogo">
+                        <li><a href="javascript:;"><img src="images/sidebar/11.png" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="images/sidebar/12.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+    </div>
+    <!-- 主体结束 -->
+    <!--  -->
+    <!-- 登录界面开始 -->
+    <div class="loginFace">
+        <!-- 登录盒子 -->
+        <div class="bigLogin">
+            <div class="tomImg">
+                <img src="images/login/1.png" alt="">
+            </div>
+            <i class="icon close" id="close1"></i>
+            <!-- 手机号登录界面 -->
+            <div class="innerLogin telBox">
+                <h1>手机登录</h1>
+                <div class="telIpt">
+                    <div class="inTel">
+                        <div class="local"><i>+86</i><a class="icon"></a></div>
+                        <input type="tel" class="tel" placeholder="请输入手机号" />
+                    </div>
+                    <div class="successCode">
+                        <input type="text" class="codeIpt" id="codeIpt1" maxlength="4" placeholder="验证码" />
+                        <span>获取验证码</span>
+                    </div>
+                </div>
+                <button class="successBtn" id="loginBtn1">登录</button>
+                <div class="otherLogin other">其他登录方式</div>
+                <div class="agreement">
+                    注册登录即表示同意
+                    <i> 用户协议 </i>
+                    、
+                    <i>隐私政策</i>
+                </div>
+                <!-- 登录界面结束 -->
+            </div>
+            <!-- 其他方式 -->
+            <div class="innerLogin otherBox">
+                <h1>账号登录</h1>
+                <div class="telIpt">
+                    <div class="inTel">
+                        <input type="text" class="tewIpt" placeholder="邮箱/手机号（国际号码加区号）" />
+                    </div>
+                    <div class="successCode">
+                        <input type="password" id="codeIpt2" class="codeIpt" maxlength="4" placeholder="请输入密码" />
+                    </div>
+                </div>
+                <button class="successBtn" id="loginBtn2">登录</button>
+                <div class="otherLogin phone">手机登录</div>
+                <div class="right">忘记密码</div>
+                <div class="loginLogo">
+                    <ul>
+                        <li><img src="images/login/weibo.svg" alt="微博"></li>
+                        <li><img src="images/login/weixin.svg" alt="微信"></li>
+                        <li><img src="images/login/github.svg" alt="github"></li>
+                    </ul>
+                </div>
+                <div class="agreement">
+                    注册登录即表示同意
+                    <i> 用户协议 </i>
+                    、
+                    <i>隐私政策</i>
+                </div>
+            </div>
+        </div>
+        <!-- 提示内容 -->
+        <div class="tips">
+            <ul id="tipsList">
+                <!-- 登录异常的相关提示内容 -->
+            </ul>
+        </div>
+    </div>
+    <!-- 写文章页面 -->
+    <div class="writePage">
+        <div class="markdown">
+            <!-- 头部导航 -->
+            <header class="writeHeader">
+                <div class="writeImg">
+                    <img src="images/write/photo.svg" alt="图片图标">
+                </div>
+                <div class="leftBox"></div>
+                <input type="text" placeholder="请输入文章标题..." maxlength="80" class="titleIpt">
+                <div class="rightBox">
+                    <div class="tipBox">文章将自动保存至草稿箱</div>
+                    <button class="noPublish">草稿箱</button>
+                    <div class="publishBox">
+                        <button class="publish">发布</button>
+                    </div>
+                    <div class="togBox">
+                        <div class="togBtn"><img src="images/write/tog.svg" alt="切换"></div>
+                        <div class="switchTip">切换为富文本编辑器</div>
+                    </div>
+                    <div class="headImg">
+                        <img src="images/header/1.png" alt="头像" class="allHead">
+                    </div>
+                    <div class="headShow">
+                        <div class="myImp">
+                            <ul>
+                                <li id="goAfter"><span>返回主页</span></li>
+                                <li><span>写文章</span></li>
+                                <li><span>草稿</span></li>
+                            </ul>
+                            <ul>
+                                <li id="myHomeW"><span>我的主页</span></li>
+                                <li><span>我的喜欢</span></li>
+                                <li><span>我的收藏集</span></li>
+                                <li><span>标签管理</span></li>
+                            </ul>
+                            <ul>
+                                <li><span>设置</span></li>
+                                <li><span class="writeAbout">关于</span><i></i></li>
+                            </ul>
+                        </div>
+                        <div class="moreMe">
+                            <ul>
+                                <li><span>下载应用</span></li>
+                                <li><span>关于</span></li>
+                                <li><span>加入我们</span></li>
+                                <li><span>翻译计划</span></li>
+                                <li><span>合作伙伴</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+            <!-- 头部导航结束 -->
+            <!-- 编辑按钮 -->
+            <div class="writeNav">
+                <div class="leftNav">
+                    <div class="leftItem"><img src="images/write/1.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/2.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/3.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/4.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/5.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/6.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/7.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/8.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/10.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/11.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/12.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/13.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/14.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/15.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/16.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/17.svg" alt=""></div>
+                </div>
+                <div class="rightNav">
+                    <div class="leftItem"><img src="images/write/18.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/19.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/20.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/21.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/22.svg" alt=""></div>
+                    <div class="leftItem"><img src="images/write/23.svg" alt=""></div>
+                </div>
+            </div>
+            <!-- 编辑按钮结束 -->
+            <!-- 文本框 -->
+            <main class="writeMain">
+                <textarea name="" id="" cols="30" rows="20" class="writeTex" autofocus></textarea>
+            </main>
+        </div>
+    </div>
+    <!-- 写文章页面结束 -->
+    <!-- 我的主页开始 -->
+    <div class="minePage">
+        <div class="mineBox">
+            <!-- 左侧相关内容 -->
+            <div class="majorLeft">
+                <!-- 个人信息 -->
+                <div class="message">
+                    <div class="imgBig"><img src="images/header/1.png" alt="" class="allHead" id="headHead"></div>
+                    <div class="infoBox">
+                        <div class="sickName">
+                            <span class="userName">用户林俊丞</span>
+                        </div>
+                        <div class="myPosition"><span class="work">你从事什么职业</span></div>
+                        <!-- <div class="myIntro"><span class="intro">你的格言</span></div> -->
+                    </div>
+                    <div class="actionBox">
+                        <div class="linkBox">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                        <button class="editBtn">编辑个人资料</button>
+                        <!-- 加在这 -->
+                    </div>
+                </div>
+                <!-- 个人信息结束 -->
+                <!-- 我的创作 -->
+                <div class="myAct">
+                    <nav class="actHeader">
+                        <li id="trend" class="selected">
+                            <div class="actItem">动态</div>
+                        </li>
+                        <li id="allAct">
+                            <div class="actItem">文章</div>
+                        </li>
+                        <li id="hotPot">
+                            <div class="actItem">沸点</div>
+                        </li>
+                        <li id="goodPot">
+                            <div class="actItem">赞<strong id="loveNum">0</strong><i></i></div>
+                        </li>
+                        <li id="bookPot">
+                            <div class="actItem">小册</div>
+                        </li>
+                        <li id="morePot">
+                            <div class="actItem">更多<i></i></div>
+                        </li>
+                    </nav>
+                    <div class="goodBox">
+                        <div class="actGood" id="goodBtn1">文章<i class="count" id="count1">0</i></div>
+                        <div class="actGood" id="goodBtn2">沸点<i class="count">0</i></div>
+                    </div>
+                    <div class="moreBox">
+                        <div class="actGood" id="collectBox1">收藏集</div>
+                        <div class="actGood" id="collectBox2">关注</div>
+                    </div>
+                    <div class="listBody">
+                        <!-- 文章 -->
+                        <div class="bodyBox">
+                            <div class="bodyHeader">
+                                <div class="bodyLeft"><a href="javascript:;">文章</a></div>
+                                <div class="bodyRight"><a href="javascript:;" class="hot">热门</a><a
+                                        href="javascript:;">最新</a></div>
+                            </div>
+                            <ul class="bodyContent newsLi" id="contentAct1">
+                                <div class="contentMap" id="contentMap1">
+                                    <div class="noneContent">列表为空</div>
+                                </div>
+                                <!-- 文章放这 -->
+                            </ul>
+                            <div class="emptyTip" id="tipBox1">
+                                <i class="emptyIcon"></i>
+                                <div class="emptyText">这里什么都没有</div>
+                            </div>
+                        </div>
+                        <!-- 赞 -->
+                        <div class="bodyBox2">
+                            <div class="bodyHeader">
+                                <div class="bodyLeft"><a href="javascript:;">赞</a></div>
+                                <div class="bodyRight"><a href="javascript:;" class="hot" id="hotText1">文章</a><a
+                                        href="javascript:;" id="hotText2">沸点</a></div>
+                            </div>
+                            <ul class="bodyContent newsLi" id="contentAct2">
+                                <div class="contentMap" id="contentMap2">
+                                    <div class="noneContent">列表为空</div>
+                                </div>
+                                <!-- 文章放这 -->
+                            </ul>
+                            <div class="emptyTip" id="tipBox2">
+                                <i class="emptyIcon"></i>
+                                <div class="emptyText">这里什么都没有</div>
+                            </div>
+                        </div>
+                        <!-- 更多 -->
+                        <div class="bodyBox3">
+                            <div class="bodyHeader">
+                                <div class="bodyLeft"><a href="javascript:;">收藏集</a></div>
+                                <div class="bodyRight"><a href="javascript:;" class="hot" id="loveBox1">创建的</a><a
+                                        href="javascript:;" id="loveBox2">关注的</a></div>
+                            </div>
+                            <ul class="bodyContent">
+                                <div class="contentMap">
+                                    <div class="noneContent">列表为空</div>
+                                </div>
+                                <!-- 文章放这 -->
+                            </ul>
+                            <div class="emptyTip">
+                                <i class="emptyIcon"></i>
+                                <div class="emptyText">这里什么都没有</div>
+                            </div>
+                        </div>
+                        <!-- 空 -->
+                        <div class="bodyBox4">
+                            <ul class="bodyContent">
+                                <div class="contentMap">
+                                    <div class="noneContent">列表为空</div>
+                                </div>
+                            </ul>
+                            <div class="emptyTip">
+                                <i class="emptyIcon"></i>
+                                <div class="emptyText">这里什么都没有</div>
+                            </div>
+                        </div>
+                        <!-- 关注用户 -->
+                        <div class="bodyBox5">
+                            <div class="bodyHeader">
+                                <div class="bodyLeft"><a href="javascript:;">关注</a></div>
+                                <div class="bodyRight"><a href="javascript:;" class="selectedA"
+                                        id="loveBest">关注的用户</a><a href="javascript:;" id="loveBox5">关注的团队</a><a
+                                        href="javascript:;" id="myLoveM">关注者</a><a href="javascript:;">关注标签</a></div>
+                            </div>
+                            <div class="lovePeopleBox">
+                                <ul class="loves">
+                                    <!-- 关注者放这 -->
+                                </ul>
+                                <ul class="myLoveP">
+                                    <!-- 我关注的人 -->
+                                </ul>
+                            </div>
+                            <div class="emptyTip" id="tipBox5">
+                                <i class="emptyIcon"></i>
+                                <div class="emptyText">这里什么都没有</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 我的创作结束 -->
+            </div>
+            <!-- 左侧结束 -->
+            <!-- 右侧固定栏开始 -->
+            <div class="majorRight">
+                <div class="rightBoxM">
+                    <div class="loved">
+                        <li>
+                            <div class="loverItem">关注了</div>
+                            <div class="loverCount" id="myLove2">0</div>
+                        </li>
+                        <li>
+                            <div class="loverItem">关注者</div>
+                            <div class="loverCount" id="loveMe">0</div>
+                        </li>
+                    </div>
+                    <div class="moreInf">
+                        <li>
+                            <div class="loveAct">收藏集</div>
+                            <div class="loverCount">0</div>
+                        </li>
+                        <li>
+                            <div class="loveAct">关注标签</div>
+                            <div class="loverCount">0</div>
+                        </li>
+                        <li class="moreTime">
+                            <div class="loveAct">加入于</div>
+                            <div class="inTime">2021年1月1日</div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧固定栏结束 -->
+        </div>
+    </div>
+    <!-- 我的主页结束 -->
+    <!-- 编辑资料页面开始 -->
+    <div class="editPage">
+        <main class="editMain">
+            <!-- 编辑资料页的小头部开始 -->
+            <nav class="editNav">
+                <ul class="editFather">
+                    <li class="editNavItem editIcon" id="editHome"><i></i><span>返回个人主页</span></li>
+                    <li class="editNavItem editSelected"><span>个人资料</span></li>
+                    <li class="editNavItem"><span>账号设置</span></li>
+                    <li class="editNavItem"><span>简历管理</span></li>
+                </ul>
+            </nav>
+            <!-- 编辑资料页的小头部结束 -->
+            <div class="editAbout">
+                <div class="editBoxShadow">
+                    <!-- 编辑相关信息开始 -->
+                    <div class="editContent">
+                        <h1>我的资料</h1>
+                        <ul class="settingItem">
+                            <li class="meItem paddingMini"><span>头像</span>
+                                <div class="editRight">
+                                    <img class="allHead" id="bigImg" src="images/header/1.png" alt="">
+                                    <div class="actionBox">
+                                        <div class="hint">支持 jpg、png、jpeg 格式大小 5M 以内的图片</div>
+                                        <input type="file" class="editInput" id="fileIpt">
+                                        <button class="uploadBtn">上传文件</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="meItem "><span>用户名</span>
+                                <div class="meBox"><input placeholder="填写你的用户名" class="editInput" id="editName">
+                                    <div class="containBox">
+                                        <button class="editBtn2">修改</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="meItem"><span>职位</span>
+                                <div class="meBox"><input placeholder="填写你的职位" class="editInput">
+                                    <div class="containBox">
+                                        <button class="editBtn2">修改</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="meItem"><span>公司</span>
+                                <div class="meBox"><input placeholder="填写你的公司" class="editInput">
+                                    <div class="containBox">
+                                        <button class="editBtn2">修改</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="meItem"><span>个人介绍</span>
+                                <div class="meBox"><input placeholder="填写你职业技能、擅长的事情、喜欢的事情等" class="editInput"
+                                        id="editInfo">
+                                    <div class="containBox">
+                                        <button class="editBtn2">修改</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="meItem"><span>个人主页</span>
+                                <div class="meBox"><input placeholder="填写你的个人主页" class="editInput">
+                                    <div class="containBox">
+                                        <button class="editBtn2">修改</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 编辑相关信息结束 -->
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- 编辑资料页面结束 -->
+    <!-- 文章详细内容开始 -->
+    <div class="detailPage">
+        <main class="detailMain">
+            <div class="viewBox">
+                <!-- 文章详细内容 -->
+                <div class="articleMain">
+                    <div class="artDetail">
+                        <div class="authorInfo">
+                            <img src="images/header/1.png" alt="" class="actImg">
+                            <div class="authorInfoBox">
+                                <div class="authorName">阿童木</div>
+                                <div class="createTime">2021年4月23日</div>
+                            </div>
+                            <button class="authorBtn">关注</button>
+                        </div>
+                        <h1 class="artTitle">11111</h1>
+                        <div class="artContent">3</div>
+                    </div>
+                    <div class="tagBox">
+                        <div class="tagList">
+                            <div class="tagItem">文章分类</div>
+                            <div>前端</div>
+                        </div>
+                        <div class="tagList">
+                            <div class="tagItem">文章标签</div>
+                            <div>html</div>
+                        </div>
+                    </div>
+                    <div class="authorFooter">
+                        <div class="authorInner">
+                            <img src="images/header/1.png" alt="" class="actImg">
+                            <div class="authorInfoTwo">
+                                <div class="authorSick">
+                                    用户6127524412760
+                                </div>
+                                <div class="authorOther">发布1篇专栏· 获得点赞1· 获得阅读5</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bannerBox">
+                        <a href="javascript:;">
+                            安装掘金浏览器插件
+                        </a>
+                        <div class="bannerDetail">
+                            打开新标签页发现好内容，掘金、GitHub、Dribbble、ProductHunt 等站点内容轻松获取。快来安装掘金浏览器插件获取高质量内容吧！
+                        </div>
+                    </div>
+                    <!-- <div class="commentFrom">
+                        <div class="commentInner">
+                            <div class="avatarBox">
+                                <img src="images/header/1.png" alt="" class="actImg">
+                            </div>
+                            <div class="commentIpt">
+                                <div class="comIptBox">
+                                    <input placeholder="输入评论..." type="text" class="commentCreate">
+                                </div>
+                                <div class="actionCommit">
+                                    <div class="emojiBtn"><img src="images/detail/emoji.svg" alt="表情"
+                                            class="iconSmall"><span>表情</span></div>
+                                    <div class="upImgBtn"><img src="images/detail/up.svg" alt="图片"
+                                            class="iconSmall"><span>图片</span></div>
+                                    <div class="submitBtn">
+                                        <span>Ctrl or ⌘ + Enter</span>
+                                        <button class="commitBtn">评论</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- 评论区 -->
+                        <!-- <div class="comment">
+                            <div class="commentItem">
+                                <div class="resImg"><img src="images/header/1.png" alt=""></div>
+                                <div class="commentContent">
+                                    <div class="commentHeader"><span class="otherP">ljc</span><span
+                                            class="mid">@</span><span class="subOther">阿童木</span></div>
+                                    <div class="commentDetail">
+                                        您好，我是掘金技术社区的运营者，请问可以转载您的这篇文章到掘金开发者社区的官方公众平台吗~方便的话可以加我微信：ywx_Ilsa_联系我~</div>
+                                    <div class="commentTime">
+                                        <div class="timeTime">6小时前</div>
+                                        <div class="timeBox">
+                                            <div class="timeGood"></div>
+                                            <div class="timeSay">回复</div>
+                                        </div>
+                                    </div>
+                                    <div class="recordBox">
+                                        <div class="record">
+                                            <div class="commentIpt">
+                                                <div class="recIptBox">
+                                                    <input placeholder="输入评论..." type="text" class="recordCreate">
+                                                </div>
+                                                <div class="actionRecord">
+                                                    <div class="emojiBtn"><img src="images/detail/emoji.svg" alt="表情"
+                                                            class="iconSmall"><span>表情</span></div>
+                                                    <div class="upImgBtn"><img src="images/detail/up.svg" alt="图片"
+                                                            class="iconSmall"><span>图片</span></div>
+                                                    <div class="submitBtn">
+                                                        <span>Ctrl or ⌘ + Enter</span>
+                                                        <button class="recordBtn">评论</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="showRecord">
+                                            <div class="resImg"><img src="images/header/1.png" alt=""></div>
+                                            <div class="showRecordBox">
+                                                <div class="commentHeader"><span class="otherP">ljc</span><span
+                                                    class="mid">@</span><span class="subOther">阿童木</span></div>
+                                            <div class="commentDetail">
+                                                您好，我是掘金技术社区的运营者，请问可以转载您的这篇文章到掘金开发者社区的官方公众平台吗~方便的话可以加我微信：ywx_Ilsa_联系我~
+                                            </div>
+                                            <div class="commentTime">
+                                                <div class="timeTime">6小时前</div>
+                                                <div class="timeBox">
+                                                    <div class="timeGood"></div>
+                                                    <div class="timeSay">回复</div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    <!-- </div> -->
+
+                </div>
+                <!-- 文章详细内容结束 -->
+                <!-- 右侧侧边栏 -->
+                <div class="artSidebar">
+                    <!-- 作者信息 -->
+                    <div class="authorNum">
+                        <div class="authorTitle">关注作者</div>
+                        <div class="authorBody">
+                            <a href="javascript:;" class="bodyCup"><img src="images/header/1.png" alt="头像"
+                                    id="actHeadImg" class="actImg">
+                                <div class="infoYou">阿童木</div>
+                            </a>
+                            <div class="infoNum"><img class="miniIcon" src="images/detail/good.svg"
+                                    alt="点赞"><span>获得点赞</span><span>1</span></div>
+                            <div class="infoNum"><img class="miniIcon" src="images/detail/eye.svg"
+                                    alt="浏览"><span>文章被阅读</span><span>5</span></div>
+                        </div>
+                    </div>
+                    <!-- 广告一 -->
+                    <div class="adver">
+                        <div><img src="images/sidebar/3.png" alt="" /></div>
+                        <div class="downCode">
+                            <img src="images/sidebar/4.png" alt="" class="code" />
+                            <div class="downApp">
+                                <div class="downFirst">下载掘金客户端</div>
+                                <div class="downSmall">解锁更多技术团队热招职位</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 广告2 -->
+                    <div class="adver2">
+                        <img src="images/detail/side2.png" alt="">
+                    </div>
+                    <!-- 相关文章 -->
+                    <div class="otherAct">
+                        <div class="blockTitle">相关文章</div>
+                        <div class="blockBody">
+                            <ul class="blockBodyUl">
+                                <li class="blockBodyItem">
+                                    <div class="blockContent">HTML 页面布局规则与布局方式</div>
+                                    <div class="entryBox">
+                                        <div class="entryGood">22</div>
+                                        <div class="entrySay">33</div>
+                                    </div>
+                                </li>
+                                <li class="blockBodyItem">
+                                    <div class="blockContent">娓娓道来为什么移动端会有 1px 问题以及解决方案（附demo）</div>
+                                    <div class="entryBox">
+                                        <div class="entryGood">23</div>
+                                        <div class="entrySay">12</div>
+                                    </div>
+                                </li>
+                                <li class="blockBodyItem">
+                                    <div class="blockContent">是时候该罢黜 JPEG，独尊新编码了</div>
+                                    <div class="entryBox">
+                                        <div class="entryGood">2</div>
+                                        <div class="entrySay">3</div>
+                                    </div>
+                                </li>
+                                <li class="blockBodyItem">
+                                    <div class="blockContent">H5中的Drag(拖拽)</div>
+                                    <div class="entryBox">
+                                        <div class="entryGood">6</div>
+                                        <div class="entrySay">73</div>
+                                    </div>
+                                </li>
+                                <li class="blockBodyItem">
+                                    <div class="blockContent">奇思妙想 CSS 文字动画</div>
+                                    <div class="entryBox">
+                                        <div class="entryGood">62</div>
+                                        <div class="entrySay">37</div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右侧侧边栏结束 -->
+
+                <!-- 左侧固定条 -->
+                <div class="fixSidebar">
+                    <ul class="sideIcon">
+                        <!-- <li class="sideIconItem"><span class="sideCount" id="sideCount1">3</span></li>
+                        <li class="sideIconItem"><span class="sideCount" id="sideCount2">4</span></li>
+                        <li class="sideIconItem"><span class="sideCount" id="sideCount3">5</span></li>
+                        <li class="sideIconItem"></li>
+                        <li class="sideIconItem"></li>
+                        <li class="sideShare">分享</li>
+                        <li class="sideIconItem"></li>
+                        <li class="sideIconItem"></li>
+                        <li class="sideIconItem"></li> -->
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- 文章详细内容结束 -->
+    <!-- 全局遮罩层弹框 -->
+    <div class="tipsPage">
+        <div class="tipsContent">只能删除自己的评论</div>
+    </div>
+    <!-- 火箭置顶 -->
+    <div class="rocket">
+        <div class="rocketImg"><img src="images/main/2.png" alt=""></div>
+    </div>
+    <!-- 火箭结束 -->
+    <!-- 加载动画 -->
+    <div class="loading">
+        <span style ="--ljc:1;"></span>
+        <span style ="--ljc:2;"></span>
+        <span style ="--ljc:3;"></span>  
+        <span style ="--ljc:4;"></span>
+        <span style ="--ljc:5;"></span>
+        <span style ="--ljc:6;"></span>
+        <span style ="--ljc:7;"></span>
+        <span style ="--ljc:8;"></span>
+        <span style ="--ljc:9;"></span>
+        <span style ="--ljc:10;"></span>
+    </div>
+</body>
+
+</html>

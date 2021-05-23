@@ -1,0 +1,653 @@
+/*
+ * @Description: 文章详情页样式
+ * @Author: 林俊丞
+ * @Date: 2021-04-23 22:44:16
+ * @LastEditTime: 2021-04-29 19:11:42
+ * @LastEditors: 林俊丞
+ */
+.detailPage {
+    display: none;
+    margin-top: 60px;
+}
+
+.detailMain {
+    position: relative;
+    margin: 0 auto;
+    width: 960px;
+    height: 200px;
+    display: flow-root;
+}
+
+.viewBox {
+    position: relative;
+    margin-top: 20px;
+}
+
+.viewBox .articleMain {
+    position: relative;
+    margin-bottom: 18px;
+    padding: 24px 24px;
+    width: 700px;
+    background-color: white;
+    border-radius: 2px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+}
+
+.artDetail {
+    margin-bottom: 36px;
+    display: flow-root;
+}
+
+/* 头部作者信息 */
+.authorInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.authorBtn {
+    width: 55px;
+    height: 26px;
+    font-size: 13px;
+    border: 1px solid #6cbd45;
+    border-radius: 3px;
+    color: #6cbd45;
+    background-color: #fff;
+    padding: 0;
+    cursor: pointer;
+}
+
+.authorInfo img {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.authorInfoBox {
+    flex: 1;
+    height: 43px;
+}
+
+.authorInfoBox .authorName {
+    height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 700;
+    color: #333;
+    font-size: 16px;
+}
+
+.authorInfoBox .createTime {
+    font-size: 14px;
+    color: #909090;
+    margin-top: 3px;
+}
+
+/* 标题 */
+.artDetail .artTitle {
+    margin: 20px 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+/* 文章内容 */
+.artDetail .artContent {
+    font-size: 16px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    font-weight: 400;
+    color: #333;
+    line-height: 40px;
+    text-indent: 2em;
+}
+
+/* 文章标签 */
+.tagBox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e6eb;
+}
+
+.tagBox .tagList {
+    display: flex;
+    font-size: 14px;
+    line-height: 30px;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.tagList .tagItem {
+    flex-shrink: 0;
+    margin-right: 12px;
+    font-weight: 500;
+}
+
+.authorFooter {
+    padding: 15px 17px;
+    border-radius: 2px;
+    background-color: #f4f5f5;
+    margin-bottom: 24px;
+}
+
+/* 作者其他信息 */
+.authorFooter img {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    border-radius: 50%;
+}
+
+.authorInner {
+    display: flex;
+    align-items: center;
+}
+
+.authorInner .authorSick {
+    height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 700;
+    color: #333;
+    font-size: 16px;
+}
+
+.authorInner .authorOther {
+    font-size: 14px;
+    color: #909090;
+    margin-top: 3px;
+}
+
+/* 安装插件 */
+.bannerBox {
+    margin-bottom: 30px;
+    padding: 0 0 0 24px;
+    border-left: 6px solid #ddd;
+}
+
+.bannerBox a {
+    color: #007fff;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+.bannerBox .bannerDetail {
+    margin-top: 2px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #909090;
+}
+
+.avatarBox {
+    flex: 0 0 auto;
+}
+
+/* 发布评论 */
+.commentInner .avatarBox img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.commentInner {
+    margin: 0 20px 16px;
+    display: flex;
+    /* align-items: center; */
+    position: relative;
+    padding: 12px 16px;
+    background-color: #fafbfc;
+    border-radius: 3px;
+}
+
+.commentFrom {
+    position: relative;
+    border-top: 1px solid #ebebeb;
+    padding-top: 16px;
+}
+
+/* 评论输入框 */
+.commentIpt {
+    flex: 1 1 auto;
+    padding: 2px;
+    /* overflow: hidden; */
+}
+
+/* 输入框 */
+.commentCreate {
+    padding: 8px 0px;
+    font-size: 12px;
+    color: #17181a;
+    text-indent: 1em;
+    line-height: 18px;
+    border-radius: 3px;
+    border: 1px solid #f1f1f1;
+    width: 100%;
+    outline: none;
+}
+
+.commentCreate:focus {
+    border: 1px solid #007fff;
+}
+
+/* 表情图片 */
+.actionCommit,
+.actionRecord {
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    margin: 8px 0 0;
+}
+
+.actionCommit img,
+.actionRecord img {
+    width: 18px;
+    height: 18px;
+}
+
+.emojiBtn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+    color: #027fff;
+}
+
+.upImgBtn {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #027fff;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.submitBtn {
+    flex: 0 0 auto;
+    margin-left: auto;
+    color: #c2c2c2;
+    margin-right: 8px;
+    font-size: 13px;
+}
+
+/* 提交按钮 */
+.actionCommit .commitBtn {
+    flex: 0 0 auto;
+    margin-left: auto;
+    padding: 6px 15px;
+    font-size: 15px;
+    color: white;
+    background-color: #027fff;
+    border-radius: 2px;
+    border: none;
+    cursor: default;
+    opacity: .4;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* 评论区 */
+.comment {
+    margin: 0 20px 0 80px;
+}
+
+.commentItem {
+    margin-bottom: 16px;
+    display: flex;
+    border-bottom: 1px solid #e5e6eb;
+}
+
+.commentItem .resImg img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+/* 评论的人 */
+.commentItem .commentHeader {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 13px;
+}
+
+.commentItem .mid {
+    margin: 0 2px;
+}
+
+/* 内容 */
+.commentContent {
+    flex: 1;
+}
+
+.commentItem .commentDetail {
+    font-size: 13px;
+    line-height: 22px;
+    color: #505050;
+    overflow: hidden;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.commentTime {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    font-weight: 400;
+    color: #909090;
+    font-size: 12px;
+    user-select: none;
+}
+
+.commentTime .timeBox {
+    font-family: 'icomoon';
+    color: #909090;
+}
+
+.timeGood,
+.timeSay,
+.timeSay2 {
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.delateComBTn {
+    margin-left: 10px;
+    color: #007fff;
+    cursor: pointer;
+    display: none;
+}
+
+.delateComBTn2 {
+    margin-left: 10px;
+    color: #007fff;
+    cursor: pointer;
+    display: none;
+}
+
+.delatetrue {
+    display: none !important;
+}
+
+/* 右侧侧边栏 */
+.artSidebar {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 240px;
+}
+
+.commentItem:hover .delateComBTn {
+    display: inline-block;
+}
+
+/* 作者相关信息 */
+.authorNum {
+    position: relative;
+    background-color: white;
+    margin-bottom: 18px;
+    border-radius: 2px;
+}
+
+.authorNum .authorTitle {
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid hsla(0, 0%, 58.8%, .1);
+}
+
+.authorBody {
+    padding: 16px;
+}
+
+.authorBody a {
+    cursor: pointer;
+    color: #909090;
+    display: flex;
+    align-items: center;
+}
+
+.bodyCup {
+    padding-bottom: 15px;
+}
+
+.bodyCup img {
+    flex: 0 0 auto;
+    margin-right: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.bodyCup .infoYou {
+    flex: 1 1 auto;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.infoNum {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #000;
+}
+
+.miniIcon {
+    width: 25px;
+    height: 25px;
+    margin-right: 12px;
+}
+
+/* 广告 */
+.adver {
+    background-color: white;
+}
+
+.adver2 {
+    margin-top: 30px;
+}
+
+/* 相关文章 */
+.otherAct {
+    margin-top: 30px;
+    background-color: white;
+}
+
+.otherAct .blockTitle {
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid hsla(0, 0%, 58.8%, .1);
+}
+
+.blockBodyItem {
+    padding: 10px 16px;
+    cursor: pointer;
+    color: #909090;
+}
+
+.blockContent {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+
+.entryBox {
+    font-family: 'icomoon';
+}
+
+.entryGood {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.entrySay {
+    display: inline-block;
+}
+
+/* 左侧固定条 */
+.fixSidebar {
+    position: fixed;
+    width: 36px;
+    top: 192px;
+    margin-left: -90px;
+}
+
+.sideIcon {
+    font-family: 'icomoon';
+    cursor: pointer;
+}
+
+.sideIcon .sideIconItem {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    background-color: white;
+    border-radius: 50%;
+    color: #909090;
+    /* opacity: .5; */
+    font-size: 16px;
+    margin-bottom: 9px;
+    text-align: center;
+    line-height: 36px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 4%);
+    user-select: none;
+}
+
+.sideIcon .sideShare {
+    margin: 20px 0px 10px;
+    font-size: 12px;
+    color: #333;
+    opacity: .5;
+    text-align: center;
+}
+
+.sideIcon .true {
+    color: #6cbd45 !important;
+}
+
+.sideIconItem .true {
+    color: white !important;
+    background-color: #6cbd45;
+}
+.sideIconItem:hover {
+    /* opacity: 1; */
+    color: rgb(54, 52, 52);
+}
+.sideCount {
+    position: absolute;
+    right: -10px;
+    top: 0px;
+    width: 20px;
+    font-size: 12px;
+    line-height: 12px;
+    color: white;
+    background-color: #b2bac2;
+    border-radius: 7px;
+    opacity: 1;
+}
+
+#cmt {
+    color: inherit;
+}
+
+/* 回复 */
+.record {
+    display: none;
+    background-color: #fafbfc;
+}
+
+.record .commentIpt {
+    padding: 12px;
+    margin-top: 10px;
+}
+
+.record .recordCreate {
+    padding: 8px 0px 8px 0px;
+    font-size: 12px;
+    color: #17181a;
+    line-height: 18px;
+    text-indent: 1em;
+    border-radius: 3px;
+    border: 1px solid #007fff;
+    outline: none;
+    width: 100%;
+}
+
+.recordBtn {
+    flex: 0 0 auto;
+    margin-left: auto;
+    padding: 6px 15px;
+    font-size: 15px;
+    color: white;
+    background-color: #027fff;
+    border-radius: 2px;
+    border: none;
+    cursor: default;
+    opacity: .4;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.showRecord {
+    /* display: none; */
+    display: flex;
+    margin-top: 20px;
+}
+
+.showRecordBox {
+    flex: 1;
+}
+
+.showRecordBox:hover .delateComBTn2 {
+    display: inline-block;
+}
+
+.actionRecord {
+    display: flex !important;
+}
+/* emoji */
+.emojiBox {
+    display: none;
+    position: absolute;
+    top: 20px;
+    width: 130px;
+    background-color: white;
+    box-shadow: 0 5px 18px 0 rgb(0 0 0 / 16%);
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0px;
+}
+.category li {
+    margin: 5px;
+}
+.emoji {
+    width: 20px;
+    height: 20px;
+}
+.emoji:hover {
+    transform: scale(1.1);
+}
